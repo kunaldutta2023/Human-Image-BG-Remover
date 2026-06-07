@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Background Removed Successfully</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- LOADER -->
+
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+AI Remover
+</div>
+
+<div class="nav-links">
+
+<a href="/">Home</a>
+<a href="#comparison">Compare</a>
+<a href="#download">Download</a>
+
+</div>
+
+<a href="/" class="nav-btn">
+New Image
+</a>
+
+</nav>
+
+<!-- SUCCESS HERO -->
+
+<section class="result-section">
+
+<div class="badge">
+
+✅ Background Removed Successfully
+
+</div>
+
+<h1>
+
+Your Image Is Ready
+
+</h1>
+
+<p>
+
+Download the transparent PNG or upload another image.
+
+</p>
+
+</section>
+
+<!-- COMPARISON SECTION -->
+
+<section
+id="comparison"
+class="comparison-section">
+
+<h2 class="section-title">
+
+Before & After
+
+</h2>
+
+<div class="compare-grid">
+
+<!-- ORIGINAL -->
+
+<div class="preview-card">
+
+<h3>
+
+📷 Original Image
+
+</h3>
+
+<img
+class="result-image"
+src="{{ url_for('static', filename='uploads/' + original_image) }}"
+alt="Original Image">
+
+</div>
+
+<!-- OUTPUT -->
+
+<div class="preview-card">
+
+<h3>
+
+✨ Background Removed
+
+</h3>
+
+<div class="triangle-bg">
+
+<img
+class="result-image"
+src="{{ url_for('static', filename='outputs/' + output_image) }}"
+alt="Background Removed">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DOWNLOAD SECTION -->
+
+<section
+id="download"
+class="download-section">
+
+<h2 class="section-title">
+
+Download Your Image
+
+</h2>
+
+<p>
+
+Your transparent PNG has been generated successfully.
+
+</p>
+
+<div class="action-buttons">
+
+<a
+href="{{ url_for('static', filename='outputs/' + output_image) }}"
+download
+class="download-link">
+
+⬇ Download PNG
+
+</a>
+
+<a
+href="/"
+class="upload-link">
+
+📤 Upload Another
+
+</a>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features-result">
+
+<h2 class="section-title">
+
+Why Use AI Remover?
+
+</h2>
+
+<div class="features-grid">
+
+<div class="feature-card">
+
+<div class="feature-icon">
+⚡
+</div>
+
+<h3>
+Fast Processing
+</h3>
+
+<p>
+Background removed in seconds.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="feature-icon">
+🎯
+</div>
+
+<h3>
+Accurate Detection
+</h3>
+
+<p>
+Deep learning powered segmentation.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="feature-icon">
+🖼️
+</div>
+
+<h3>
+Transparent PNG
+</h3>
+
+<p>
+Ready for editing and design work.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TIPS -->
+
+<section class="tips-section">
+
+<h2 class="section-title">
+
+Tips For Better Results
+
+</h2>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+
+<h3>
+📸 Use High Quality Images
+</h3>
+
+<p>
+Clear images produce cleaner segmentation results.
+</p>
+
+</div>
+
+<div class="testimonial-card">
+
+<h3>
+💡 Good Lighting
+</h3>
+
+<p>
+Well-lit subjects improve background detection.
+</p>
+
+</div>
+
+<div class="testimonial-card">
+
+<h3>
+👤 Single Subject
+</h3>
+
+<p>
+Best results occur when one subject is clearly visible.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta-section">
+
+<h2>
+
+Need Another Background Removed?
+
+</h2>
+
+<p>
+
+Upload another image and let AI do the work.
+
+</p>
+
+<a
+href="/"
+class="primary-btn cta-btn">
+
+Remove Another Image
+
+</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>
+
+AI Background Remover
+
+</h2>
+
+<p>
+
+Powered by Flask, TensorFlow and OpenCV
+
+</p>
+
+<p>
+
+© 2026 Kunal Dutta. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<!-- LOADER SCRIPT -->
+
+<script>
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+document.getElementById("loader").style.opacity="0";
+
+setTimeout(()=>{
+
+document.getElementById("loader").style.display="none";
+
+},500);
+
+},1200);
+
+});
+
+</script>
+
+</body>
+</html>

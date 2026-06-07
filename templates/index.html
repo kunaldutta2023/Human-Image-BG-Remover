@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Background Remover | Remove Background Instantly</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- LOADER -->
+
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        AI Remover
+    </div>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#footer">Contact</a>
+    </div>
+
+    <a href="#upload" class="nav-btn">
+        Start Free
+    </a>
+
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <span class="badge">
+            ✨ Free AI Tool
+        </span>
+
+        <h1>
+            Remove Image Backgrounds In Seconds
+        </h1>
+
+        <p>
+            Upload any JPG, PNG or JPEG image and instantly receive a high-quality transparent PNG powered by AI segmentation.
+        </p>
+
+        <form
+            action="/upload"
+            method="POST"
+            enctype="multipart/form-data"
+            id="upload">
+
+            <label class="upload-area">
+
+                <input
+                    type="file"
+                    name="image"
+                    id="fileInput"
+                    required>
+
+                <div id="uploadContent">
+
+                    <div class="upload-icon">
+                        📁
+                    </div>
+
+                    <h3>Upload Your Image</h3>
+
+                    <p>PNG • JPG • JPEG</p>
+
+                    <img id="previewImage">
+
+                </div>
+
+            </label>
+
+            <button class="primary-btn">
+                Remove Background
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="hero-right">
+
+        <div class="image-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800"
+            alt="Background Removal Demo">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+    <div>
+        <h2>10K+</h2>
+        <p>Images Processed</p>
+    </div>
+
+    <div>
+        <h2>98%</h2>
+        <p>Accuracy</p>
+    </div>
+
+    <div>
+        <h2>24/7</h2>
+        <p>Available</p>
+    </div>
+
+    <div>
+        <h2>100%</h2>
+        <p>Free</p>
+    </div>
+
+</section>
+
+<!-- HOW IT WORKS -->
+
+<section id="how-it-works" class="timeline-section">
+
+    <h2 class="section-title">
+        How It Works
+    </h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">
+                1
+            </div>
+
+            <div class="timeline-content">
+
+                <h3>Upload Image</h3>
+
+                <p>
+                    Select any JPG, PNG or JPEG image from your device.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">
+                2
+            </div>
+
+            <div class="timeline-content">
+
+                <h3>AI Processing</h3>
+
+                <p>
+                    Our deep learning model automatically detects and removes the image background.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">
+                3
+            </div>
+
+            <div class="timeline-content">
+
+                <h3>Download PNG</h3>
+
+                <p>
+                    Download your transparent PNG image instantly.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section id="features">
+
+    <h2 class="section-title">
+        Why Choose Our AI Background Remover?
+    </h2>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Lightning Fast</h3>
+            <p>
+                Remove image backgrounds within seconds using optimized AI processing.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>High Accuracy</h3>
+            <p>
+                Pixel-perfect segmentation powered by deep learning models.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🖼️</div>
+            <h3>Transparent PNG</h3>
+            <p>
+                Download HD transparent PNG files with clean edges.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Private & Secure</h3>
+            <p>
+                Your images are processed securely and never shared.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Mobile Friendly</h3>
+            <p>
+                Use the tool from desktop, tablet or mobile devices.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">💯</div>
+            <h3>Free to Use</h3>
+            <p>
+                No registration required. Start removing backgrounds instantly.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials">
+
+    <h2 class="section-title">
+        What Users Say
+    </h2>
+
+    <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                Amazing quality and very fast. Saved me hours of editing.
+            </p>
+
+            <h4>
+                John Smith
+            </h4>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                Perfect for product photography and online stores.
+            </p>
+
+            <h4>
+                Emily Davis
+            </h4>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                Best free AI background remover I have ever used.
+            </p>
+
+            <h4>
+                Michael Lee
+            </h4>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FAQ -->
+
+<section id="faq" class="faq">
+
+    <h2 class="section-title">
+        Frequently Asked Questions
+    </h2>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            How does AI remove backgrounds?
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Our deep learning segmentation model detects the subject and separates it from the background automatically.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Is this tool free?
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Yes. You can upload and remove backgrounds completely free.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Which file formats are supported?
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                JPG, JPEG and PNG image formats are supported.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            Will the output have a transparent background?
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+                Yes. The final image is exported as a transparent PNG.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta-section">
+
+    <h2>
+        Ready to Remove Backgrounds?
+    </h2>
+
+    <p>
+        Upload your image now and get a transparent PNG instantly.
+    </p>
+
+    <a href="#upload" class="primary-btn cta-btn">
+        Get Started
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="footer">
+
+    <h2>
+        AI Background Remover
+    </h2>
+
+    <p>
+        Built with Flask, TensorFlow and OpenCV.
+    </p>
+
+    <p>
+        © 2026 Kunal Dutta. All Rights Reserved.
+    </p>
+
+</footer>
+
+<!-- IMAGE PREVIEW -->
+
+<script>
+
+const input = document.getElementById("fileInput");
+const preview = document.getElementById("previewImage");
+
+input.addEventListener("change", function(){
+
+    const file = this.files[0];
+
+    if(file){
+
+        preview.src = URL.createObjectURL(file);
+        preview.style.display = "block";
+
+    }
+
+});
+
+</script>
+
+<!-- FAQ -->
+
+<script>
+
+document.querySelectorAll(".faq-question")
+.forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+btn.parentElement.classList.toggle("active");
+
+});
+
+});
+
+</script>
+
+<!-- LOADER -->
+
+<script>
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+document.getElementById("loader").style.opacity="0";
+
+setTimeout(()=>{
+
+document.getElementById("loader").style.display="none";
+
+},500);
+
+},1200);
+
+});
+
+</script>
+
+</body>
+</html>
