@@ -1,6 +1,4 @@
 venv/
-dataset/
-DIS5K/
 
 __pycache__/
 *.pyc
